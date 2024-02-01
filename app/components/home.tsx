@@ -162,10 +162,10 @@ function Screen() {
               <Route path={Path.Chat} element={<Chat />} />
               <Route path={Path.Settings} element={<Settings />} />
             </Routes>
-            <ClickyComponent />
           </div>
         </>
       )}
+      <ClickyComponent />
     </div>
   );
 }
