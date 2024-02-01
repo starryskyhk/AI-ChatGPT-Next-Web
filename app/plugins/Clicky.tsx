@@ -1,25 +1,6 @@
-import { useEffect } from "react";
-import Router from "next/router";
-// @ts-ignore
-import Clicky from "react-clicky";
-
+import React from "react";
 const ClickyComponent = () => {
-  useEffect(() => {
-    Router.events.on("routeChangeComplete", handleClicky);
-
-    return () => {
-      Router.events.off("routeChangeComplete", handleClicky);
-    };
-  }, []);
-
-  const handleClicky = () => {
-    if (typeof window !== "undefined") {
-      const clicky = new Clicky({ siteId: "101442322" });
-      clicky.log(window.location.href);
-    }
-  };
-
-  return null;
+  return <script async src="//static.getclicky.com/js" data-id="101442322" />;
 };
 
 export default ClickyComponent;
