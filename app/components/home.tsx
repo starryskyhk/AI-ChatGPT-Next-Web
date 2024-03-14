@@ -1,5 +1,7 @@
 "use client";
 
+import ClickyComponent from "@/app/plugins/Clicky";
+
 require("../polyfill");
 
 import { useState, useEffect } from "react";
@@ -163,6 +165,7 @@ function Screen() {
           </div>
         </>
       )}
+      <ClickyComponent />
     </div>
   );
 }
