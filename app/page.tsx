@@ -1,5 +1,7 @@
 import { Analytics } from "@vercel/analytics/react";
 
+import { SpeedInsights } from "@vercel/speed-insights/next";
+
 import { Home } from "./components/home";
 
 import { getServerSideConfig } from "./config/server";
@@ -13,6 +15,7 @@ export default async function App() {
       {serverConfig?.isVercel && (
         <>
           <Analytics />
+          <SpeedInsights />
         </>
       )}
     </>
