@@ -26,7 +26,7 @@ case "$(uname -s)" in
 esac
 
 # Check if needed dependencies are installed and install if necessary
-if ! command -v node >/dev/null || ! command -v git >/dev/null >/dev/null; then
+if ! command -v node >/dev/null || ! command -v git >/dev/null; then
   case "$(uname -s)" in
     Linux)
       if [[ "$(cat /etc/*-release | grep '^ID=')" = "ID=ubuntu" ]]; then
@@ -54,7 +54,7 @@ if ! command -v node >/dev/null || ! command -v git >/dev/null >/dev/null; then
 fi
 
 # Clone the repository and install dependencies
-git clone https://github.com/Yidadaa/ChatGPT-Next-Web
+git clone https://github.com/ChatGPTNextWeb/ChatGPT-Next-Web
 cd ChatGPT-Next-Web
 npm install
 
